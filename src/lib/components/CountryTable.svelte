@@ -47,22 +47,28 @@
         </div>
         </div>
 
-        <div class="graph bg-orange-50">
-            graphgraphgr
-            aphgraphgr
-            aphgraphgraphg
-            raphgraphgraphgr
-            
-        </div>
+       
 </div>
 
 <script>
     import { beforeUpdate } from "svelte";
-    export let countries;
-
+    import { getContext } from "svelte";
+    import fetchStore from '$lib/util/countryDataStore';
+    
+  
+     export let countries;
+    /**
+	 * @type {number}
+	 */
     let lengthOfList,pageLength = 10;
+    /**
+	 * @type {any}
+	 */
+    // @ts-ignore
     let countriesToDisplay , currentPage , currentIndex = 0;
-
+    
+    
+    
     $:pages = Math.ceil(lengthOfList / pageLength);
 
     beforeUpdate(() => {
@@ -70,38 +76,35 @@
         countriesToDisplay = Object.entries($countries);
         //console.log(countriesToDisplay[0]);
         currentPage = CurrentPageGen();
-        console.log(currentPage);
+        
 	});
 
+    /**
+	 * @param {{ target: { value: string; }; }} event
+	 */
     function handlePageSizeChange(event) {
         pageLength = parseInt(event.target.value);
     }
 
     function CurrentPageGen () {
-        console.log(currentIndex , pageLength);
+        
         return countriesToDisplay.slice(currentIndex , currentIndex + pageLength);
     }
 
     function nextPage() {
 
-        console.log(currentIndex,lengthOfList);
+        
         if(currentIndex < lengthOfList)currentIndex = currentIndex + pageLength;
         else currentIndex = 0;
 
         currentPage = CurrentPageGen();
-        console.log(currentPage);
+        
     }
 </script>
 
 <style>
 
-    .cont {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 1585px;
-        height: 100vh;
-    }
+   
     .table_container{
         padding: 0em 1em;
         margin: 0.5em;
@@ -133,11 +136,5 @@
         min-width: 100px;
         font-size: 0.7em;
     }
-    .graph{
-        height: 300px;
-        padding: 0em 1em;
-        margin: 0.5em;
-        border-radius: 0.5em;
-        border: 0.002em solid rgb(206, 206, 206);
-    }
+   
 </style>

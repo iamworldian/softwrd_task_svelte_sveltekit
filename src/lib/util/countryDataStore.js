@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store'
 
+
 /**
  * @param {RequestInfo | URL} url
  */
