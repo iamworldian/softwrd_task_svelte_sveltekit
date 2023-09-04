@@ -43,9 +43,9 @@ const [data, loading, error, get] = fetchStore(url);
    .cont {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         width: 100vw;
-        height: 100vh;
+       
         
     }
 
