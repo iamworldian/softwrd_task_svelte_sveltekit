@@ -28,9 +28,12 @@ import {Style, Fill, Stroke} from 'ol/style';
               }),
               style: new Style({
                 fill: new Fill({
-                  color: 'rgba(0, 106, 78,0.75)',
+                  color: 'rgba(0, 106, 78,0.3)',
                 }),
-                
+                        stroke: new Stroke({
+                    color: 'bakck',
+                    width: 1
+                  }),
               }),
             })
           ],
