@@ -15,7 +15,7 @@
             </thead>
             <tbody>
                 {#each currentPage as country}   
-                    <TableRow {country}/>
+                    <CountryTableRow {country}/>
                 {/each}
             </tbody>
           </table>
@@ -40,7 +40,7 @@
     import { beforeUpdate } from "svelte";
     import { getContext } from "svelte";
     import fetchStore from '$lib/util/countryDataStore';
-    import TableRow from "./TableRow.svelte";
+    import CountryTableRow from "./CoutnryTableRow.svelte";
   
      export let countries;
     /**
@@ -51,7 +51,7 @@
 	 * @type {any}
 	 */
     // @ts-ignore
-    
+
     let countriesToDisplay , currentPage , currentIndex = 0;
     $:pages = Math.ceil(lengthOfList / pageLength);
 
@@ -112,13 +112,5 @@
         padding: 1em;
         font-size: 1em;
     }
-    td{
-        padding : 0.5em;
-        border-bottom: 0.002em solid rgb(206, 206, 206);
-        min-width: 100px;
-        font-size: 0.7em;
-        max-width: 1em;
-        text-overflow: ellipsis;
-    }
-   
+  
 </style>

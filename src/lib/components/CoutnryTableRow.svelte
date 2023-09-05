@@ -16,3 +16,15 @@
     <td>{country[1].currencies != null ? Object.keys(country[1].currencies)[0] : 'Undefined'}</td>
     <td class="">{country[1].languages != null ? Object.values(country[1].languages) : [].join(',')}</td>
 </tr>
+
+<style>
+      td{
+        padding : 0.5em;
+        border-bottom: 0.002em solid rgb(206, 206, 206);
+        min-width: 100px;
+        font-size: 0.7em;
+        max-width: 1em;
+        text-overflow: ellipsis;
+    }
+   
+</style>
