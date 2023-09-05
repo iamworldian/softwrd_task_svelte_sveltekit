@@ -14,7 +14,7 @@
         {/if}
     </td>
     <td>{country[1].currencies != null ? Object.keys(country[1].currencies)[0] : 'Undefined'}</td>
-    <td class="">{country[1].languages != null ? Object.values(country[1].languages) : [].join(',')}</td>
+    <td class="break-all">{country[1].languages != null ? Object.values(country[1].languages) : [].join(',')}</td>
 </tr>
 
 <style>
