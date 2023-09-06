@@ -23,12 +23,12 @@ import {Style, Fill, Stroke} from 'ol/style';
               osmLayer,
               new VectorLayer({
               source: new VectorSource({
-                url: 'https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson',
+                url: 'https://openlayers.org/en/v4.6.5/examples/data/geojson/countries.geojson',
                 format: new GeoJSON()
               }),
               style: new Style({
                 fill: new Fill({
-                  color: 'rgba(0, 106, 78,0.3)',
+                  color: 'rgba(103, 242, 209,0.75)',
                 }),
                         stroke: new Stroke({
                     color: 'bakck',
