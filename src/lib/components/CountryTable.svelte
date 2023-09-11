@@ -88,10 +88,9 @@
 
 <style>
 
-   
     .table_container{
         padding: 0em 1em;
-        margin: 0.5em;
+        margin: 1em;
         width: 60vw;
         height: 80vh;
         border-radius: 0.5em;
@@ -100,6 +99,7 @@
         flex-direction: column;
         position: relative;
     }
+
     .controller{
         display: flex;
         margin: 1em;
@@ -107,7 +107,6 @@
         position: fixed;
         bottom: 0;
         left: 50;
-
     }
 
     th{
