@@ -1,5 +1,5 @@
-<div class="cont">
-    <div class="table_container bg-orange-50">
+<div class="relative">
+    <div class="table_container overflow-auto bg-orange-50">
 
         <table class="">
             <thead class="">
@@ -93,16 +93,20 @@
         padding: 0em 1em;
         margin: 0.5em;
         width: 60vw;
+        height: 80vh;
         border-radius: 0.5em;
         border: 0.002em solid rgb(206, 206, 206);
         display: flex;
         flex-direction: column;
-        font-family: 'Courier New', Courier, monospace;
+        position: relative;
     }
     .controller{
         display: flex;
         margin: 1em;
         gap: 1em;
+        position: fixed;
+        bottom: 0;
+        left: 50;
 
     }
 
